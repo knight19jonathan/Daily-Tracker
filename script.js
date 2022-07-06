@@ -1,4 +1,6 @@
+// Check to see JS is linked
 console.log("linked");
+// Vars to select the row according to the current time
 var nine = document.querySelector("#nineHundred")
 var ten = document.querySelector("#tenHundred")
 var eleven = document.querySelector("#elevenHundred")
@@ -8,14 +10,14 @@ var fourteen = document.querySelector("#fourteenHundred")
 var fifteen = document.querySelector("#fifteenHundred")
 var sixteen = document.querySelector("#sixteenHundred")
 var seveteen = document.querySelector("#seventeenHundred")
-var twentytwo = document.querySelector("#twentytwoHundred")
-var twentythree = document.querySelector("#twentythreeHundred")
 
+// var twentytwo = document.querySelector("#twentytwoHundred") AFTER HOURS TROUBLE SHOOTING 
+// var twentythree = document.querySelector("#twentythreeHundred")
+// Save button variable
 var saveEvent = document.querySelectorAll(".saveBtn")
 
+// Variables for the elements that client types text into to save their events
 var evntNine = document.querySelector("#eventsAtNine")
-
-
 var evntTen = document.querySelector("#eventsAtTen")
 var evntEleven = document.querySelector("#eventsAtEleven")
 var evntTwelve = document.querySelector("#eventsAtTwelve")
@@ -25,23 +27,17 @@ var evntThree = document.querySelector("#eventsAtThree")
 var evntFour = document.querySelector("#eventsAtFour")
 var evntFive = document.querySelector("#eventsAtFive")
 
+// Array for the 24 hour clock that is used to compare the current time to the corresponding index of the array and get the apprioate element
+let currentHourBar = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seveteen, "eighteen", "nineteen", "twenty", "twenty-one", "twentytwo", "twentythree"]
 
 
-
-
-let currentHourBar = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seveteen, "eighteen", "nineteen", "twenty", "twenty-one", twentytwo, twentythree]
-
+//Gets the current time as a variable
 var reformatDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 console.log(reformatDate);
-
+//Places time on the page at the element specified
 $("#currentDay").text(reformatDate);
 
-
-
-var a = moment().hours();
-
-console.log(a);
-
+// Function that on page load updates the displayed time every 1000 milliseconds or 1 second 
 function init() {
     setInterval(function () {
         var reformatDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
@@ -49,6 +45,7 @@ function init() {
     }, 1000);
 }
 
+// Function that specifies what color each color the hour row is based on the current time using the currentHourBar array and the current time and assigns a class to the element in the array to change the color.
 function hourBar() {
     
     let hour = moment().hours();
@@ -68,7 +65,7 @@ function hourBar() {
 
 }
 
-
+//Function on page load checks to see if there are any events in local storage and updates the page accordingly
 function savedEvents() {
     var eventThatNine = localStorage.getItem("eventsAtNine")
     if (eventThatNine == null) {
@@ -127,16 +124,14 @@ function savedEvents() {
 }
 
 
-
-
-
+//Calling the functions to be loaded on page load 
 init();
 
 savedEvents();
 
-
 hourBar();
 
+// Function that saves the events to local storage on button click of the save button to the corresponding row the save button is on. 
 saveEvent[0].addEventListener("click", function () {
     localStorage.setItem("eventsAtNine", evntNine.textContent);
     console.log(evntNine.textContent)
