@@ -17,6 +17,17 @@ console.log(reformatDate);
 
 $("#currentDay").text(reformatDate);
 
+$( ".eventSet" ).dialog({
+    modal: true
+  });
+
+// Getter
+var modal = $( ".eventSet" ).dialog( "option", "modal" );
+ 
+// Setter
+$( ".eventSet" ).dialog( "option", "modal", true );
+
+
 var a = moment().hours();
   
 console.log(a); 
