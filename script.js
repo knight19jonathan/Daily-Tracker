@@ -7,7 +7,9 @@ var thirteen = document.querySelector("#thirteenHundred")
 var fourteen = document.querySelector("#fourteenHundred")
 var fifteen = document.querySelector("#fifteenHundred")
 var sixteen = document.querySelector("#sixteenHundred")
-var seveteen = document.querySelector("#seventeenhundred")
+var seveteen = document.querySelector("#seventeenHundred")
+var twentytwo = document.querySelector("#twentytwoHundred")
+var twentythree = document.querySelector("#twentythreeHundred")
 
 var saveEvent = document.querySelectorAll(".saveBtn")
 
@@ -27,7 +29,7 @@ var evntFive = document.querySelector("#eventsAtFive")
 
 
 
-let currentHourBar = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seveteen, "eighteen", "nineteen", "twenty", "twenty-one", "twenty-two", "twenty-three"]
+let currentHourBar = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seveteen, "eighteen", "nineteen", "twenty", "twenty-one", twentytwo, twentythree]
 
 var reformatDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 console.log(reformatDate);
@@ -46,6 +48,26 @@ function init() {
         $("#currentDay").text(reformatDate)
     }, 1000);
 }
+
+function hourBar() {
+    
+    let hour = moment().hours();
+    currentHourBar[hour];
+    console.log(currentHourBar[hour]);
+    let b = currentHourBar.indexOf(currentHourBar[hour]);
+    console.log(b);
+    for (let i = 0; i < currentHourBar.length; i++) {
+        if (i < b) {
+            $(currentHourBar[i]).addClass("past");
+        } else if (i > b) {
+            $(currentHourBar[i]).addClass("future");
+        } else {
+            $(currentHourBar[i]).addClass("present");
+        }
+    }
+
+}
+
 
 function savedEvents() {
     var eventThatNine = localStorage.getItem("eventsAtNine")
@@ -105,25 +127,13 @@ function savedEvents() {
 }
 
 
-// var eventThatTen = localStorage.getItem("eventsAtTen")
-// if (eventThatTen == null) {
-//     document.querySelector("#eventsAtTen").textContent = "placeholder"
-// }
-// evntNine.textContent = eventThatTen;
 
-function hourBar() {
-    let hour = moment().hours();
-    currentHourBar[hour];
-    console.log(currentHourBar[hour]);
-    $("#twenty-two");
-    console.log("#twentytwo");
-}
 
 
 init();
 
 savedEvents();
-// savedEventsOne();
+
 
 hourBar();
 

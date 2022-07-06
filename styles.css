@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -17,7 +16,6 @@ body {
     resize: none;
     color: #000000;
     border-left: 1px solid black;
-    padding: 10px;
   }
   .jumbotron {
     text-align: center;
@@ -29,27 +27,32 @@ body {
 
   .container {
     display: flex;
+    flex: auto;
     height: 500px;
     overflow: scroll;
     
+    
   }
   table {
+    table-layout: fixed;
     width: 90%;
     background-color: #06AED5;
     overflow: scroll;
   }
 
-  thead {
-    
+  #tableColone {
+    width: 10%;
+  }
+  #tableColthree {
+    width: 10%;
+    padding: 0%;
   }
 
   tbody {
-    
+    flex: initial;
     height: 500px;
     overflow: scroll;
-    width: 100%;
   }
-
 
   tr {
     width: 100%;
@@ -60,7 +63,6 @@ body {
     color: #000000;
   }
 
-  
   .description{
     white-space: pre-wrap;
   }
@@ -103,17 +105,7 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
   }
-  
-  .saveBtn i:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
-  }
-  div {
-    display: flex;
-  }
-  /* #divheight {
-    height: 75px;
-  } */
+
