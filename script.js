@@ -27,7 +27,7 @@ var evntThree = document.querySelector("#eventsAtThree")
 var evntFour = document.querySelector("#eventsAtFour")
 var evntFive = document.querySelector("#eventsAtFive")
 
-// Array for the 24 hour clock that is used to compare the current time to the corresponding index of the array and get the apprioate element
+// Array for the 24 hour clock that is used to compare the current time to the corresponding index of the array and get the apprioate element, to used after hours trouble shooting or for making new hours make sure to change the string array hour to a variable, each variable needs a correspoding querySelector variable and table row or will break the clock array. 
 let currentHourBar = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seveteen, "eighteen", "nineteen", "twenty", "twenty-one", "twentytwo", "twentythree"]
 
 
