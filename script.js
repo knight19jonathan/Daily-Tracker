@@ -53,8 +53,63 @@ function savedEvents() {
         document.querySelector("#eventsAtNine").textContent = "..."
     }
     evntNine.textContent = eventThatNine;
+
+    var eventThatTen = localStorage.getItem("eventsAtTen")
+    if (eventThatTen == null) {
+        document.querySelector("#eventsAtTen").textContent = "..."
+    }
+    evntTen.textContent = eventThatTen;
+
+    var eventThatEleven = localStorage.getItem("eventsAtEleven")
+    if (eventThatEleven == null) {
+        document.querySelector("#eventsAtEleven").textContent = "..."
+    }
+    evntEleven.textContent = eventThatEleven;
+
+    var eventThatTwelve = localStorage.getItem("eventsAtTwelve")
+    if (eventThatTwelve == null) {
+        document.querySelector("#eventsAtTwelve").textContent = "..."
+    }
+    evntTwelve.textContent = eventThatTwelve;
+
+    var eventThatOne = localStorage.getItem("eventsAtOne")
+    if (eventThatOne == null) {
+        document.querySelector("#eventsAtOne").textContent = "..."
+    }
+    evntOne.textContent = eventThatOne;
+
+    var eventThatTwo = localStorage.getItem("eventsAtTwo")
+    if (eventThatTwo == null) {
+        document.querySelector("#eventsAtTwo").textContent = "..."
+    }
+    evntTwo.textContent = eventThatTwo;
+
+    var eventThatThree = localStorage.getItem("eventsAtThree")
+    if (eventThatThree == null) {
+        document.querySelector("#eventsAtThree").textContent = "..."
+    }
+    evntThree.textContent = eventThatThree;
+
+    var eventThatFour = localStorage.getItem("eventsAtFour")
+    if (eventThatFour == null) {
+        document.querySelector("#eventsAtFour").textContent = "..."
+    }
+    evntFour.textContent = eventThatFour;
+
+    var eventThatFive = localStorage.getItem("eventsAtFive")
+    if (eventThatFive == null) {
+        document.querySelector("#eventsAtFive").textContent = "..."
+    }
+    evntFive.textContent = eventThatFive;
+
 }
 
+
+// var eventThatTen = localStorage.getItem("eventsAtTen")
+// if (eventThatTen == null) {
+//     document.querySelector("#eventsAtTen").textContent = "placeholder"
+// }
+// evntNine.textContent = eventThatTen;
 
 function hourBar() {
     let hour = moment().hours();
@@ -68,35 +123,44 @@ function hourBar() {
 init();
 
 savedEvents();
+// savedEventsOne();
 
 hourBar();
 
-saveEvent[0].addEventListener("click", function(){
-    localStorage.setItem("eventsAtNine", evntNine.textContent);  
+saveEvent[0].addEventListener("click", function () {
+    localStorage.setItem("eventsAtNine", evntNine.textContent);
+    console.log(evntNine.textContent)
 });
 
-saveEvent[1].addEventListener("click", function(){
+saveEvent[1].addEventListener("click", function () {
     localStorage.setItem("eventsAtTen", evntTen.textContent);
 });
-saveEvent[2].addEventListener("click", function(){
+
+saveEvent[2].addEventListener("click", function () {
     localStorage.setItem("eventsAtEleven", evntEleven.textContent);
 });
-saveEvent[3].addEventListener("click", function(){
+
+saveEvent[3].addEventListener("click", function () {
     localStorage.setItem("eventsAtTwelve", evntTwelve.textContent);
 });
-saveEvent[4].addEventListener("click", function(){
+
+saveEvent[4].addEventListener("click", function () {
     localStorage.setItem("eventsAtOne", evntOne.textContent);
 });
-saveEvent[5].addEventListener("click", function(){
+
+saveEvent[5].addEventListener("click", function () {
     localStorage.setItem("eventsAtTwo", evntTwo.textContent);
 });
-saveEvent[6].addEventListener("click", function(){
+
+saveEvent[6].addEventListener("click", function () {
     localStorage.setItem("eventsAtThree", evntThree.textContent);
 });
-saveEvent[7].addEventListener("click", function(){
+
+saveEvent[7].addEventListener("click", function () {
     localStorage.setItem("eventsAtFour", evntFour.textContent);
-}); 
-saveEvent[8].addEventListener("click", function(){
+});
+
+saveEvent[8].addEventListener("click", function () {
     localStorage.setItem("eventsAtFive", evntFive.textContent);
     console.log(evntFive.textContent)
 });  
