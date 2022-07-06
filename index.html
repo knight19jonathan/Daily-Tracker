@@ -26,11 +26,11 @@
       <!-- Timeblocks go here -->
       <div class="table">
         <div class="row row-cols-5">
-          <table class="table table-dark table-hover table-bordered table-w-auto" cellspacing="0" cellpadding="0">
+          <table class="table table-light table-hover table-bordered table-w-auto" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
-                <th scope="col"></th>
-                <th scope="col" class="th-lg"></th>
+                <th scope="col">Time</th>
+                <th scope="col" class="th-lg">Click to add your event then hit Save</th>
                 <!-- <th scope="col">Last</th> -->
                 <!-- <th scope="col">Handle</th> -->
                 <th scope="col" class="th-sm"></th>
@@ -39,50 +39,48 @@
             <tbody id="selectable">
               <tr>
                 <th scope="row" id="ninehundred">9 am</th>
-                <td class="eventSet">Mark Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium eveniet
-                  error aut, natus illo eum sint voluptatum molestiae debitis in molestias quidem, optio earum animi
-                  assumenda voluptatem obcaecati tempora maxime.</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtNine" contenteditable="true"></td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
-              <tr class="table-success" id="1000">
+              <tr>
                 <th scope="row" id="tenHundred">10 am</th>
-                <td class="eventSet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus inventore laboriosam libero numquam quibusdam vero, quas, earum consectetur assumenda quod illum dignissimos ipsa repudiandae laborum dolore cupiditate in excepturi quos?</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtTen" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus inventore laboriosam libero numquam quibusdam vero, quas, earum consectetur assumenda quod illum dignissimos ipsa repudiandae laborum dolore cupiditate in excepturi quos?</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
               <tr>
                 <th scope="row" id="elevenHundred">11 am</th>
-                <td class="eventSet" type="text" class="ui-widget-content"> larry
+                <td class="eventSet" id="eventsAtEleven" contenteditable="true"> larry
                 </td>
-                <td>save button</td>
+                <td><button class="saveBtn">Save</button></td>
               <tr>
                 <th scope="row" id="twelveHundred">12 pm</th>
-                <td class="eventSet">Jacob</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtTwelve" contenteditable="true">Jacob</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
               <tr>
                 <th scope="row" id="thirteenHundred">1 pm</th>
-                <td class="eventSet">Larry</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtOne" contenteditable="true">  Larry</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
               <tr>
                 <th scope="row" id="fourteenHundred">2 pm</th>
-                <td class="eventSet">Larry</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtTwo" contenteditable="true">  Larry</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
               <tr>
                 <th scope="row" id="fifteenHundred">3 pm</th>
-                <td class="eventSet">Larry</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtThree" contenteditable="true">Larry</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
               <tr>
                 <th scope="row" id="sixteenHundred">4 pm</th>
-                <td class="eventSet">Larry</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtFour" contenteditable="true">Larry</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
               <tr>
                 <th scope="row" id="twenty-two">5 pm</th>
-                <td class="eventSet">Larry</td>
-                <td>save button</td>
+                <td class="eventSet" id="eventsAtFive" contenteditable="true">Larry</td>
+                <td><button class="saveBtn">Save</button></td>
               </tr>
 
             </tbody>
